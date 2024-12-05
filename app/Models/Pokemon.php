@@ -9,6 +9,11 @@ class Pokemon extends Model
     protected $fillable = [
         'nome',
         'tipo',
-        'pontosdepoder'
+        'pontosdepoder',
+        'image',
+        'coach_id'
     ] ;
+    public function coach(){
+        return $this->belongsTo(Coach::class);;
+    }
 }
